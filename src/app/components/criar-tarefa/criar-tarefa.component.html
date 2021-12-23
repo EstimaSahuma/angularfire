@@ -1,0 +1,27 @@
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3>Form de Actividades</h3>
+                    <form class="mt-4" [formGroup]="item" (ngSubmit)="salvarItem()">
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Nome</label>
+                                <input type="text" formControlName="nome" class="form-control form-control-lg">
+                            </div>
+                            <div class="col">
+                                <label for="">Apelido</label>
+                                <input type="text" formControlName="apelido" class="form-control form-control-lg">
+                            </div>
+                            <input type="text" formControlName="documento" class="form-control form-control-lg mt-1" placeholder="Documento">
+                            
+                            <button class="btn btn-lg btn-success mt-3 float-center" type="submit">Salvar</button>
+                            <button class="btn btn-lg btn-default mt-3 float-center" routerLink="/listar-tarefa">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

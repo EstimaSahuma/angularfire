@@ -1,0 +1,31 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <button class="btn btn-dark btn-lg float-right" routerLink="/criar-tarefa">Nova</button>
+            <hr>
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Apelido</th>
+                    <th scope="col">Documento</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngIf="items == []">Sem Item Para Apresentar...</tr>
+                  <tr *ngFor="let item of items">
+                    <th scope="row">{{item.id}}</th>
+                    <td>{{item.nome}}</td>
+                    <td>{{item.apelido}}</td>
+                    <td>{{item.documento}}</td>
+                    <td>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a (click)="deleteItem(item.id)" class="btn btn-danger">Apagar</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
